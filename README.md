@@ -1,10 +1,10 @@
-# Data Science
+# Herramientas de data Science
 
-Este proyecto en formato de libro reproducible compila recursos y tutoriales relacionados con la ciencia de datos.
+Este proyecto es un libro reproducible que compila recursos y tutoriales relacionados con la ciencia de datos.
 
-Está hecho con MyST Markdown buscando emplear herramientas basadas en Python, R, Markdown, Google Colab, Jupiter notebook, Github, bases de datos, Myst, Quarto y QGIS.
+Está hecho con [MyST Markdown](https://mystmd.org/) empleando herramientas basadas en Python, R, Markdown, Google Colab, Jupiter notebook, Github, bases de datos, Myst, Quarto y QGIS.
 
-Tiene el proposito de documentar y compartir conocimientos sobre ciencia de datos, análisis de datos, visualización de datos, aprendizaje automático y temas relacionados; pero es especialmente mi sitio de pruebas.
+Tiene el proposito de documentar y compartir recursos, ejercicios y pruebas de estas herramientas aplicadas al análisis y visualización de datos empleando asistentes de IA.
 
 Si tienes alguna duda, sugerencia o quieres contribuir, no dudes en contactarme o abrir un issue en el repositorio.
 
