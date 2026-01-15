@@ -7,7 +7,7 @@ subject: Tutorial
 venue:
   title: MyST Markdown
 open_access: true
-date: 2023/07/05
+date: 2023-07-05
 ---
 
 With the JupyterLab MyST extension, you can also open and preview a markdown file as you are working on it. This will open up in real time and show you the updates! 🎉

@@ -8,7 +8,7 @@ exports:
   - format: pdf
 ---
 
-Existe una sólida documentación de la instalación y funcionamiento de Myst en su sitio oficial ([https://mystmd.org/](#0)). Para nosotros hispanohablantes facilita emplear la opcoónd e traducción del navegador.
+Existe una sólida documentación de la instalación y funcionamiento de Myst en su sitio oficial (<https://mystmd.org/>). Para nosotros hispanohablantes facilita emplear la opción de traducción del navegador.
 
 ## Instalación de Myst
 -   Revise el tutorial por extenso aquí: [*Link*](https://mystmd.org/guide/quickstart)
