@@ -1,4 +1,4 @@
-# Herramientas de data Science
+# Herramientas de ciencia de datos
 
 Este proyecto es un libro reproducible que compila recursos y tutoriales relacionados con la ciencia de datos.
 

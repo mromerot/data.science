@@ -2,9 +2,9 @@
 version: 1
 project:
   id: 25dff7c5-7adc-40df-8ee9-9bbcb09ca0d3
-  title: Data science
+  title: Herramientas de ciencia de datos
   # description:
-  keywords: [data science, Python, R, Myst, Jupyter, notebooks, Google Colab]
+  keywords: [data science, Python, R, Myst, Jupyter, notebooks, Google Colab, Qgis]
   authors:
     - name: Mauricio Romero T.
   github: https://github.com/mromerot/data.science.git
