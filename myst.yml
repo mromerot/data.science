@@ -26,7 +26,7 @@ project:
       file: README.md
     - title: Google Colab
       children:
-        - file: google-colab/bienvenida-colab.ipynb
+        - file: google-colab/Introduccion-Colab.ipynb
         - file: google-colab/tutorial-colab.ipynb
         - file: google-colab/overview-of-colaboratory-features.ipynb
         - file: google-colab/Quick-primer-Colab Jupyter.ipynb
