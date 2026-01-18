@@ -26,10 +26,11 @@ project:
       file: README.md
     - title: Google Colab
       children:
-        - file: google-colab/Introduccion-Colab.ipynb
-        - file: google-colab/tutorial-colab.ipynb
-        - file: google-colab/overview-of-colaboratory-features.ipynb
-        - file: google-colab/Quick-primer-Colab Jupyter.ipynb
+        - file: google-colab/01-Introduccion-Colab.ipynb
+        - file: google-colab/02-Tutorial-Colab.ipynb
+        - file: google-colab/03-Overview-of-Colaboratory-Features.ipynb
+        - file: google-colab/04-Quick-primer-Colab Jupyter.ipynb
+        - file: google-colab/05-Colab-IA.ipynb
     - title: MyST Markdown
       children:
         - file: myst/config-myst.md
