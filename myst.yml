@@ -42,9 +42,9 @@ project:
         - file: myst/05-markdown-files.md
         - file: myst/06-HowtoMyST.md
         - file: myst/07-notebook.ipynb
-    - title: Prueba de plantillas
+    - title: Google Earth Engine
       children:
-        - file: plantillas/agu.md
+        - file: gee/gee.md
     - title: QGIS
       children:
         - file: qgis/qgis.md
