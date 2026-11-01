@@ -1,0 +1,315 @@
+/* ==========================================================================
+   Data Science — identidad visual sobre el tema book-theme de MyST.
+   Es la de EVA (Evaluación y análisis de riesgos de desastres) y SIDRo: paleta
+   de las tres capas, tamaños de fuente de CCDR-tools, sidebar fijo e íconos por
+   sección como en el CLIMAAX Handbook.
+   Este archivo es la fuente; `construir_css.py` le añade los íconos (SVG
+   incrustados) y escribe `datascience.css`, que es el que usa myst.yml.
+   ========================================================================== */
+
+:root {
+  /* Paleta EVA: las tres capas del riesgo del logo, más el azul noche del texto */
+  --eva-noche: #0b2545;
+  --eva-rio: #1a6fa3;         /* amenaza */
+  --eva-rio-oscuro: #145a8c;
+  --eva-bosque: #2e7d32;      /* exposición */
+  --eva-tierra: #c8811a;      /* vulnerabilidad */
+  --eva-alerta: #c2410c;
+  --eva-niebla: #f4f7fa;
+  --eva-titulo: var(--eva-noche);
+  --eva-texto: #2b3440;
+  --eva-borde: #e3e8ee;
+  --eva-sidebar-fondo: #fbfcfd;
+  --eva-ancho-sidebar: 18rem;
+  --eva-alto-barra: 60px;
+  --eva-ancho-logo: 230px;   /* proporción 307:48 del logo, a 36 px de alto */
+  --eva-alto-logo: 36px;
+
+  /* Tamaños de fuente de CCDR-tools (GFDRR) */
+  --eva-fs-texto: 16px;
+  --eva-lh-texto: 1.65;
+  --eva-fs-sidebar: 14px;
+  --eva-fs-h1: 36px;
+  --eva-fs-h2: 32px;
+  --eva-fs-h3: 19.2px;
+  --eva-fs-h4: 16px;
+  --eva-fs-tabla: 14.4px;
+
+  /* Colores del tema MyST */
+  --myst-color-link: var(--eva-rio);
+  --myst-color-link-hover: var(--eva-noche);
+  --myst-color-link-underline: var(--eva-rio);
+  --myst-color-primary: var(--eva-rio);
+  --myst-color-primary-hover: var(--eva-rio-oscuro);
+  --myst-color-active: var(--eva-rio);
+  --myst-color-active-bg: rgba(26, 111, 163, 0.1);
+  --myst-color-accent-text: var(--eva-noche);
+  --myst-color-focus-ring: var(--eva-rio);
+  --myst-color-focus-outline: #9cc8e6;
+  --myst-color-info: var(--eva-rio);
+  --myst-color-info-text: var(--eva-rio-oscuro);
+  --myst-color-info-bg: #eaf3fa;
+  --myst-color-success: var(--eva-bosque);
+  --myst-color-success-text: var(--eva-bosque);
+  --myst-color-success-bg: #edf6ee;
+  --myst-color-warning: var(--eva-tierra);
+  --myst-color-warning-text: #9a5f0c;
+  --myst-color-warning-bg: #fdf4e5;
+  --myst-color-danger: var(--eva-alerta);
+  --myst-color-danger-text: var(--eva-alerta);
+  --myst-color-danger-bg: #fdefe8;
+  --myst-color-prose-body: var(--eva-texto);
+}
+
+.dark {
+  --eva-titulo: #e8eef4;
+  --eva-texto: #d7dde4;
+  --eva-borde: #33404d;
+  --eva-niebla: #1d2733;
+  --eva-sidebar-fondo: #161d26;
+  --myst-color-link: #5dade2;
+  --myst-color-link-hover: #a9d4f0;
+  --myst-color-link-underline: #5dade2;
+  --myst-color-primary: #5dade2;
+  --myst-color-active: #5dade2;
+  --myst-color-active-bg: rgba(93, 173, 226, 0.16);
+  --myst-color-accent-text: #e8eef4;
+  --myst-color-info: #5dade2;
+  --myst-color-info-text: #8cc6ec;
+  --myst-color-success: #66bb6a;
+  --myst-color-success-text: #81c784;
+  --myst-color-warning: #f0a830;
+  --myst-color-warning-text: #f5bf63;
+  --myst-color-danger: #fb8c55;
+  --myst-color-danger-text: #fb8c55;
+  --myst-color-prose-body: var(--eva-texto);
+}
+
+/* --------------------------------------------------------------------------
+   Tipografía (tamaños de CCDR-tools en todo el libro)
+   -------------------------------------------------------------------------- */
+html { font-size: 16px; }
+
+article,
+article p,
+article li,
+article dd,
+article dt,
+article blockquote {
+  font-size: var(--eva-fs-texto) !important;
+  line-height: var(--eva-lh-texto) !important;
+}
+
+article { color: var(--eva-texto); }
+
+h1, article h1 {
+  font-size: var(--eva-fs-h1) !important;
+  line-height: 1.15;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: var(--eva-titulo);
+}
+
+article h2 {
+  font-size: var(--eva-fs-h2) !important;
+  line-height: 1.15 !important;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--eva-titulo);
+  margin-top: 2.2rem;
+}
+
+article h3 {
+  font-size: var(--eva-fs-h3) !important;
+  line-height: 1.25;
+  font-weight: 600;
+  color: var(--eva-titulo);
+}
+
+article h4 { font-size: var(--eva-fs-h4) !important; color: var(--eva-titulo); }
+
+/* Subtítulo de la página */
+.myst-fm-block-subtitle, article > div p.text-zinc-600, header + p {
+  font-size: var(--eva-fs-h3);
+}
+
+article table, article table p { font-size: var(--eva-fs-tabla) !important; }
+article table th {
+  background: var(--eva-niebla);
+  color: var(--eva-titulo);
+  font-weight: 600;
+}
+article table tbody tr:nth-child(even) { background: color-mix(in srgb, var(--eva-niebla) 55%, transparent); }
+
+figcaption, article figcaption p { font-size: 14.4px; line-height: 1.55; }
+
+/* Esquema de la página (derecha) */
+.myst-outline, .myst-outline a, nav[aria-label="Document Outline"], nav[aria-label="Document Outline"] a {
+  font-size: var(--eva-fs-sidebar);
+}
+
+/* --------------------------------------------------------------------------
+   Barra superior: logo a la izquierda, alineado con el sidebar
+   -------------------------------------------------------------------------- */
+.myst-top-nav { border-bottom: 1px solid var(--eva-borde); box-shadow: none; }
+
+.myst-home-link-logo { flex: none; margin-right: 0 !important; }
+.myst-home-link img {
+  height: var(--eva-alto-logo) !important;
+  width: var(--eva-ancho-logo) !important;
+  max-width: none;
+}
+
+.myst-home-link span {
+  font-size: 12.5px !important;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: var(--myst-color-text-secondary);
+  max-width: 15rem;
+  white-space: normal;
+  margin-left: 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--eva-borde);
+}
+
+/* En pantallas angostas el logo basta: el lema no cabe junto a la búsqueda */
+@media (max-width: 639px) {
+  .myst-home-link span { display: none; }
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar: tamaño de CCDR, encabezados de sección y elemento activo
+   -------------------------------------------------------------------------- */
+.myst-primary-sidebar,
+.myst-primary-sidebar .myst-toc,
+.myst-primary-sidebar a {
+  font-size: var(--eva-fs-sidebar);
+  line-height: var(--eva-lh-texto);
+}
+
+.myst-primary-sidebar .myst-toc-item { margin-top: 1px; margin-bottom: 1px; }
+.myst-primary-sidebar .myst-toc-item > a,
+.myst-primary-sidebar .myst-toc > a { padding-top: 0.3rem; padding-bottom: 0.3rem; }
+
+/* El logo ya lleva al inicio */
+.myst-primary-sidebar .myst-toc > a:first-child { display: none; }
+
+/* «3. Análisis» encabeza la lista de amenazas, que queda siempre visible */
+.myst-primary-sidebar .myst-toc > a[href$="/book/analisis"] {
+  font-weight: 600;
+  color: var(--eva-titulo);
+  margin-top: 0.9rem;
+  padding-left: 0.5rem;
+}
+
+/* Secciones del libro, como los encabezados de CCDR y CLIMAAX */
+.myst-primary-sidebar .myst-toc > div > .myst-toc-item > a[href$="/book/conceptos"],
+.myst-primary-sidebar .myst-toc > div > .myst-toc-item > a[href$="/book/datos"],
+.myst-primary-sidebar .myst-toc > div > .myst-toc-item > a[href$="/book/analisis"],
+.myst-primary-sidebar .myst-toc > div > .myst-toc-item > :not(a):first-child {
+  font-weight: 600;
+  color: var(--eva-titulo);
+}
+
+
+/* Las secciones de este libro son carpetas sin página propia */
+.myst-primary-sidebar .myst-toc > div + div { margin-top: 0.35rem; }
+
+/* Segundo nivel con guía vertical (como CLIMAAX) */
+.myst-primary-sidebar .collapsible-content {
+  margin-left: 0.55rem;
+  padding-left: 0.6rem;
+  border-left: 1px solid var(--eva-borde);
+}
+
+.myst-primary-sidebar .myst-toc-item.myst-toc-item-exact {
+  background: var(--myst-color-active-bg);
+  box-shadow: inset 3px 0 0 var(--myst-color-active);
+}
+.myst-primary-sidebar .myst-toc-item.myst-toc-item-exact > a { color: var(--myst-color-active); }
+
+.myst-primary-sidebar-footer {
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 0.75rem 1rem !important;
+  margin: 0 !important;
+  border-top: 1px solid var(--eva-borde);
+  color: var(--myst-color-text-secondary);
+}
+.myst-primary-sidebar-footer p { margin: 0; }
+
+/* --------------------------------------------------------------------------
+   Sidebar fijo y siempre visible desde 1024 px (como CLIMAAX y CCDR)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+  /* Sin botón de menú: el índice siempre está a la vista */
+  .myst-top-nav-menu-button { display: none !important; }
+
+  .myst-top-nav { padding-left: 0 !important; }
+  .myst-top-nav-bar { max-width: none !important; }
+  .myst-top-nav-bar > div:first-child {
+    width: auto;
+    min-width: var(--eva-ancho-sidebar) !important;
+    margin-right: 1.5rem !important;
+  }
+  .myst-home-link { margin-left: 1.25rem !important; }
+
+  .myst-primary-sidebar.myst-primary-sidebar {
+    display: block !important;
+    position: fixed !important;
+    top: var(--eva-alto-barra) !important;
+    left: 0 !important;
+    width: var(--eva-ancho-sidebar) !important;
+    max-width: none !important;
+    height: calc(100vh - var(--eva-alto-barra)) !important;
+    pointer-events: auto !important;
+    background: var(--eva-sidebar-fondo);
+    border-right: 1px solid var(--eva-borde);
+    box-shadow: none !important;
+  }
+  .myst-primary-sidebar-pointer {
+    display: flex !important;
+    height: 100%;
+    width: 100%;
+  }
+  .myst-primary-sidebar-nav { padding: 1rem 0.75rem 1rem 1rem; }
+  .myst-primary-sidebar-toc { margin-left: 0 !important; margin-right: 0 !important; max-width: none !important; }
+  .myst-primary-sidebar-footer { opacity: 1 !important; transform: none !important; }
+
+  /* El contenido empieza a la derecha del sidebar */
+  main.article-grid { margin-left: var(--eva-ancho-sidebar); }
+}
+
+/* Con el sidebar fijo, la rejilla ya no reserva el margen izquierdo del tema */
+@media (min-width: 1280px) {
+  main.article-grid,
+  main .article-grid {
+    grid-template-columns:
+      [screen-start] .25rem [screen-inset-start page-start] 1rem [page-inset-start body-outset-start] 1fr
+      [body-start gutter-left-start] 1rem [body-inset-start] minmax(8ch, 11ch) [middle-start] minmax(8ch, 11ch)
+      [gutter-left-end] minmax(8ch, 11ch) minmax(8ch, 11ch) [gutter-right-start] minmax(8ch, 11ch) [middle-end]
+      minmax(8ch, 11ch) [body-inset-end] 1rem [body-end gutter-right-end] 3rem [body-outset-end] minmax(5rem, 14rem)
+      [page-inset-end] 2rem [page-end] 1fr [screen-inset-end] .25rem [screen-end];
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Íconos de amenaza en el sidebar (como los del CLIMAAX Handbook)
+   -------------------------------------------------------------------------- */
+.myst-primary-sidebar .myst-toc-item > [title='Google Colab'], .myst-primary-sidebar .myst-toc-item > [title='MyST Markdown'], .myst-primary-sidebar .myst-toc-item > [title='Google Earth Engine'], .myst-primary-sidebar .myst-toc-item > [title='QGIS'] {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.myst-primary-sidebar .myst-toc-item > [title='Google Colab']::before, .myst-primary-sidebar .myst-toc-item > [title='MyST Markdown']::before, .myst-primary-sidebar .myst-toc-item > [title='Google Earth Engine']::before, .myst-primary-sidebar .myst-toc-item > [title='QGIS']::before {
+  content: "";
+  flex: none;
+  width: 1.45em;
+  height: 1.45em;
+  background: no-repeat center / contain;
+}
+.myst-primary-sidebar .myst-toc-item > [title='Google Colab']::before { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E %3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%23FFB74D%22/%3E%3Cstop offset=%221%22 stop-color=%22%23E65100%22/%3E%3C/linearGradient%3E%3C/defs%3E %3Ccircle cx=%2216%22 cy=%2216%22 r=%2216%22 fill=%22url(%23g)%22/%3E %3Crect x=%228%22 y=%226.5%22 width=%2216%22 height=%2219%22 rx=%222%22 fill=%22%23fff%22/%3E %3Crect x=%2210.5%22 y=%229.5%22 width=%2211%22 height=%225%22 rx=%221%22 fill=%22%23FFE0B2%22/%3E %3Crect x=%2210.5%22 y=%2216.5%22 width=%2211%22 height=%225.5%22 rx=%221%22 fill=%22%23FFE0B2%22/%3E %3Cpath d=%22M12.2 10.6 L15.2 12 L12.2 13.4 Z%22 fill=%22%23E65100%22/%3E %3Cpath d=%22M12.2 17.8 L15.2 19.25 L12.2 20.7 Z%22 fill=%22%23E65100%22/%3E %3Cpath d=%22M16.6 12 H20 M16.6 19.25 H20%22 stroke=%22%23E65100%22 stroke-width=%221.1%22 stroke-linecap=%22round%22/%3E %3C/svg%3E"); }
+.myst-primary-sidebar .myst-toc-item > [title='MyST Markdown']::before { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E %3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%237986CB%22/%3E%3Cstop offset=%221%22 stop-color=%22%23283593%22/%3E%3C/linearGradient%3E%3C/defs%3E %3Ccircle cx=%2216%22 cy=%2216%22 r=%2216%22 fill=%22url(%23g)%22/%3E %3Cpath d=%22M9 6.5 H19.5 L23.5 10.5 V25.5 H9 Z%22 fill=%22%23fff%22/%3E %3Cpath d=%22M19.5 6.5 V10.5 H23.5%22 fill=%22%23C5CAE9%22/%3E %3Cpath d=%22M12 11 V16.5 M15.2 11 V16.5 M11.2 12.8 H16 M11.2 14.8 H16%22 stroke=%22%23283593%22 stroke-width=%221.2%22 stroke-linecap=%22round%22/%3E %3Cpath d=%22M12 19.5 H20.5 M12 22.3 H18%22 stroke=%22%239FA8DA%22 stroke-width=%221.4%22 stroke-linecap=%22round%22/%3E %3C/svg%3E"); }
+.myst-primary-sidebar .myst-toc-item > [title='Google Earth Engine']::before { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E %3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%234DB6AC%22/%3E%3Cstop offset=%221%22 stop-color=%22%230D47A1%22/%3E%3C/linearGradient%3E%3C/defs%3E %3Ccircle cx=%2216%22 cy=%2216%22 r=%2216%22 fill=%22url(%23g)%22/%3E %3Ccircle cx=%2215%22 cy=%2217.5%22 r=%228.2%22 fill=%22%23fff%22/%3E %3Cpath d=%22M8.6 14.2 C11.5 15.2 13.2 13.4 14.8 14.8 C16 15.9 15.2 18.2 17.4 18.8 C19.4 19.3 20.6 17.8 23 18.2 M10.2 21.6 C12.2 20.6 13.4 22.4 15.4 21.8%22 fill=%22none%22 stroke=%22%2326A69A%22 stroke-width=%221.5%22 stroke-linecap=%22round%22/%3E %3Cellipse cx=%2215%22 cy=%2217.5%22 rx=%2211.5%22 ry=%223.6%22 transform=%22rotate(-28 15 17.5)%22 fill=%22none%22 stroke=%22%23B2EBF2%22 stroke-width=%221.1%22/%3E %3Crect x=%2223.2%22 y=%226.2%22 width=%224%22 height=%222.6%22 rx=%220.4%22 transform=%22rotate(-28 25.2 7.5)%22 fill=%22%23fff%22/%3E %3Cpath d=%22M21.4 8.4 L22.9 7.6 M27.5 6.1 L29 5.3%22 stroke=%22%23fff%22 stroke-width=%221.6%22 stroke-linecap=%22round%22/%3E %3C/svg%3E"); }
+.myst-primary-sidebar .myst-toc-item > [title='QGIS']::before { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E %3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%239CCC65%22/%3E%3Cstop offset=%221%22 stop-color=%22%232E7D32%22/%3E%3C/linearGradient%3E%3C/defs%3E %3Ccircle cx=%2216%22 cy=%2216%22 r=%2216%22 fill=%22url(%23g)%22/%3E %3Cpath d=%22M5.5 10 L12 7.5 L19.5 10 L26.5 7.5 V23.5 L19.5 26 L12 23.5 L5.5 26 Z%22 fill=%22%23fff%22/%3E %3Cpath d=%22M12 7.5 V23.5 M19.5 10 V26%22 stroke=%22%23C5E1A5%22 stroke-width=%221.2%22/%3E %3Cpath d=%22M7.5 19.5 C10 17.5 12.5 20.5 15 18.5 C17.5 16.5 20 19 24.5 16.5%22 fill=%22none%22 stroke=%22%2364B5F6%22 stroke-width=%221.4%22 stroke-linecap=%22round%22/%3E %3Cpath d=%22M19.8 7.2 A3.6 3.6 0 0 1 27 7.2 C27 9.8 23.4 13.6 23.4 13.6 C23.4 13.6 19.8 9.8 19.8 7.2 Z%22 fill=%22%23E53935%22/%3E %3Ccircle cx=%2223.4%22 cy=%227.2%22 r=%221.3%22 fill=%22%23fff%22/%3E %3C/svg%3E"); }
+
