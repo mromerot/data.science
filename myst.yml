@@ -4,7 +4,7 @@ project:
   id: 25dff7c5-7adc-40df-8ee9-9bbcb09ca0d3
   title: Herramientas de ciencia de datos
   # description:
-  keywords: [data science, Python, R, Myst, Jupyter, notebooks, Google Colab, Qgis]
+  keywords: [data science, Python, R, Myst, Jupyter, notebooks, Google Colab, VS Code, Hugging Face, Qgis]
   authors:
     - name: Mauricio Romero T.
   github: https://github.com/mromerot/data.science.git
@@ -16,6 +16,7 @@ project:
   # Cada sección tiene su carpeta /images local para mantener contenido y assets juntos:
   # - /google-colab/images/    - 6 imágenes (4 notebooks de Colab)
   # - /myst/images/             - 8 imágenes de ejemplos MyST
+  # - /hugging-face/images/     - 2 figuras del ejemplo de conteo de árboles
   # - /python/images/           - Listo para contenido Python
   # - /qgis/images/             - Listo para contenido QGIS
   # - /images/                  - Solo para assets globales (logo, favicon, imágenes compartidas)
@@ -32,6 +33,16 @@ project:
         - file: google-colab/03-Overview-of-Colaboratory-Features.ipynb
         - file: google-colab/04-Quick-primer-Colab Jupyter.ipynb
         - file: google-colab/05-Colab-IA.ipynb
+    - title: VS Code
+      children:
+        - file: vscode/01-vscode.md
+        - file: vscode/02-edicion.md
+        - file: vscode/03-extensiones-configuracion.md
+        - file: vscode/04-python-jupyter.md
+        - file: vscode/05-depuracion.md
+        - file: vscode/06-git.md
+        - file: vscode/07-escritura.md
+        - file: vscode/08-productividad.md
     - title: MyST Markdown
       children:
         - file: myst/config-myst.md
@@ -43,6 +54,12 @@ project:
         - file: myst/05-markdown-files.md
         - file: myst/06-HowtoMyST.md
         - file: myst/07-notebook.ipynb
+    - title: Hugging Face
+      children:
+        - file: hugging-face/01-hugging-face.md
+        - file: hugging-face/02-transformers.md
+        - file: hugging-face/03-datasets-spaces.md
+        - file: hugging-face/04-ejemplo-arboles.md
     - title: Google Earth Engine
       children:
         - file: gee/gee.md

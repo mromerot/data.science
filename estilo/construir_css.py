@@ -12,7 +12,9 @@ AQUI = Path(__file__).parent
 # título de la sección en myst.yml -> archivo del ícono
 ICONOS = {
     "Google Colab": "colab",
+    "VS Code": "vscode",
     "MyST Markdown": "myst",
+    "Hugging Face": "huggingface",
     "Google Earth Engine": "gee",
     "QGIS": "qgis",
 }
